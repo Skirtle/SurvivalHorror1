@@ -28,9 +28,6 @@ public class Health : MonoBehaviour {
 
         healFramesPerCycle = 60;
         dmgFramesPerCycle = 60;
-        
-        print(string.Format("Starting with {0} HP with a max of {1}", currentHealth, maxHealth));
-        print(string.Format("Overhealing is {0}", allowOverheal));
 
     }
 
@@ -48,7 +45,6 @@ public class Health : MonoBehaviour {
         if (healByFrame && !isOverhealed) {
             healingFrame += 1;
             if (healingFrame%healFramesPerCycle == 0) {
-                print(",");
                 heal(healPerCycle, true);
                 healingFrame = 0;
             }
@@ -56,7 +52,6 @@ public class Health : MonoBehaviour {
         if (isOverhealed && allowOverheal) {
             dmgFrame += 1;
             if (dmgFrame%dmgFramesPerCycle == 0) {
-                print("Damage taken! " + dmgPerCycle);
                 takeDamage(dmgPerCycle, true);
                 dmgFrame = 0;
             }
