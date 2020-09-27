@@ -24,7 +24,7 @@ public class Health : MonoBehaviour {
         isOverhealed = false;
 
         healPerCycle = 2.5;
-        dmgPerCycle = 5;
+        dmgPerCycle = 7.5;
 
         healFramesPerCycle = 60;
         dmgFramesPerCycle = 60;
